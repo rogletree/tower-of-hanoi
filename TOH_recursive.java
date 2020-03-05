@@ -8,12 +8,10 @@ public class TOH_recursive {
 	
 	public static void main(String[] args) {
 		
-		// Asks the user how many disks they want to use.
 		Scanner scan = new Scanner(System.in);
 		System.out.print("Input number of disks: ");
 		int numDisks = scan.nextInt();
 		
-		// Asks the user how many test runs they want to execute.
 		System.out.print("Input number of test runs: ");
 		int runs = scan.nextInt();
 		
@@ -27,7 +25,6 @@ public class TOH_recursive {
 		// Array created the will hold the run execution times.
 		double arr[] = new double[runs];
 		
-		// For loop that runs through however many runs the user indicated.
 		for(int i = 0; i < runs; i++) {
 			
 			// Starts the clock for seeing how long it takes the program to execute.
@@ -61,21 +58,14 @@ public class TOH_recursive {
 		
 	}
 
-	/* Recursive function that plays the Tower of Hanoi game. Takes in parameters
-	 * "n" which is the number of disks, "src_rod" which is the left-most pole and
-	 * where all the disks start out, "dest_rod" which is the right-most pole and
-	 * where all the disks will eventually end up, and "mid_rod" which is the
-	 * middle pole.
-	 * 
-	 * The print statements stating which disk is being moved between the poles are
-	 * commented out because on any n values higher than the very smallest, the
-	 * console becomes cluttered very quickly.
-	 */
 	static void towerOfHanoi(int n, char src_rod, char dest_rod, char mid_rod) {
 		/* When n=1, that means there is only 1 disk left to move, and that is
 		 * from either the left-most pole to the right-most pole or from the
 		 * middle pole to the right-most pole. Could be either one depending on
 		 * how many disks there are.
+		 * 
+		 * The print statements are commented out because for anything higher than
+		 * the smallest n values, the console gets very cluttered.
 		 */
 		if (n == 1) {
 			//System.out.println("Move disk 1 from rod " + src_rod + " to rod " + dest_rod);
